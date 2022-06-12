@@ -1,1 +1,0 @@
-{"version":3,"file":"static/css/main.800f458b.css","mappings":"AAAA,MAEI,WAAY,CADZ,UAEJ","sources":["components/Navbar.css"],"sourcesContent":["#logo{\n    width: 50px;\n    height: 50px;\n}"],"names":[],"sourceRoot":""}
