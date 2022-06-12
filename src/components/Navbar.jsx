@@ -8,7 +8,7 @@ function Navbar() {
         <nav className="navbar">
             <div className="navbar-container">
               <Link to="/" className="navbar-logo">
-                hello <img src = '/images/TF logo.png' alt="Logo" id = 'logo'/>
+                hello <img src = '/images/logo.png' alt="Logo" id = 'logo'/>
               </Link>
             </div>
         </nav>
