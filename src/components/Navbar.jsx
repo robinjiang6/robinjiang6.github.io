@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
-//import logo from '.../public/images/TF logo';<img src = {logo} alt="Logo"/>
+import './Navbar.css';
 
 function Navbar() {
   return (
@@ -8,7 +8,7 @@ function Navbar() {
         <nav className="navbar">
             <div className="navbar-container">
               <Link to="/" className="navbar-logo">
-                hello
+                hello <img src = '/images/TF logo.png' alt="Logo" id = 'logo'/>
               </Link>
             </div>
         </nav>
