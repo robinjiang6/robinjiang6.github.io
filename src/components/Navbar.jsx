@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
-import { Button } from './Button';
+import {Button} from './Button';
 import './Navbar.css';
 
 function Navbar() {
@@ -19,7 +19,6 @@ function Navbar() {
   };
 
   window.addEventListener('resize', showButton);
-
   return (
     <div>
         <nav className="navbar">
@@ -37,27 +36,22 @@ function Navbar() {
                   </Link>
                 </li>
                 <li className = 'nav-item'>
-                  <Link to='/' className='nav-links' onClick={closeMobileMenu}>
+                  <Link to='/about' className='nav-links' onClick={closeMobileMenu}>
                     About Me
                   </Link>
                 </li>
                 <li className = 'nav-item'>
-                  <Link to='/' className='nav-links' onClick={closeMobileMenu}>
+                  <Link to='/cool-stuff' className='nav-links' onClick={closeMobileMenu}>
                     Other Cool Stuff
                   </Link>
                 </li>
                 <li className = 'nav-item'>
-                  <Link to='/' className='nav-links-mobile' onClick={closeMobileMenu}>
-                    CLICK ME!!!
-                  </Link>
-                </li>
-                <li className = 'nav-item'>
-                  <Link to='/' className='nav-links' onClick={closeMobileMenu}>
+                  <Link to='/click-me' className='nav-links-mobile' onClick={closeMobileMenu}>
                     CLICK ME!!!
                   </Link>
                 </li>
               </ul>
-              {button && <Button buttonStyle='btn--outline'>CLICK ME!!!</Button>}
+                {button && <Button buttonStyle='btn--outline'>CLICK ME!!!</Button>}
             </div>
         </nav>
     </div>

@@ -15,11 +15,12 @@ export const Button = ({
     }) => {
         const checkButtonStyle = STYLES.includes(buttonStyle) ? buttonStyle : STYLES[0];
         const checkButtonSize = SIZES.includes(buttonSize) ? buttonSize : SIZES[0];
-
+        console.log(`checkButtonStyle: ${checkButtonStyle}`);
+        console.log(`checkButtonSize: ${checkButtonSize}`);
         return(
             //change out sign-up later
-            <Link to='/sign-up' className='btn-mobile'>
-                <button clssName={`btn ${checkButtonStyle} ${checkButtonSize}`} onClick={onClick} type={type}>
+            <Link to='/click-me' className='btn-mobile'>
+                <button className={`btn ${checkButtonStyle} ${checkButtonSize}`} onClick={onClick} type={type}>
                     {children}
                 </button>
             </Link>
