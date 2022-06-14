@@ -97,26 +97,31 @@
     .nav-item{
         position: relative;
     }
-    .navbar-container{
-        background-color: #00ff00;
-    }
     .nav-menu{
+        justify-content: flex-start;
+        position: absolute;
+        grid-gap: 0;
         display: flex;
         flex-direction: column;
         width: 100%;
-        height: 90vh;
+        height: 95vh;
         position: absolute;
         top: 80px;
         left: -100%;
         opacity: 1;
         transition: all 0.5s ease;
-        background-color: #ff0000;
+        background: var(--base);
     }
     .nav-menu-active{
+        position: absolute;
+        justify-content: flex-start;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 95vh;
         background: var(--base);
-        background-color: #ff0000;
+        top: 80px;
         left: 0;
-        opacity: 1;
         transition: all 0.5s ease;
         z-index: 1;
     }
