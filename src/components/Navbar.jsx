@@ -50,7 +50,7 @@ function Navbar() {
                     Other Cool Stuff
                   </Link>
                 </li>
-                <li className = 'nav-item'>
+                <li className = 'nav-item-mobile'>
                   <Link to='/click-me' className='nav-links-mobile' onClick={closeMobileMenu}>
                     CLICK ME!!!
                   </Link>
