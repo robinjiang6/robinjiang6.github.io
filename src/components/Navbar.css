@@ -66,8 +66,9 @@
     height: 100%;
 }
 .nav-links:hover{
-    border-bottom:4px solid var(--text);
-    transition: all 0.2s ease-out;
+    background-color: var(--accent);
+    border-bottom: none;
+    transition: all 0.15s ease-out;
 }
 #menuLines{
     color: var(--text);
@@ -151,7 +152,7 @@
     }
     .nav-links:hover{
         background-color: (--text);
-        color: (--base);
+        border-bottom: none;
         border-radius: 0;
     }
     .navbar-logo{
@@ -185,12 +186,12 @@
         color: var(--text);
         padding: 14px 20px;
         border: 1px solid var(--text);
-        transition: all 0.3s ease-out;
+        transition: all 0.1s ease-out;
     }
     .nav-links-mobile:hover {
         background: var(--text);
         color: var(--base);
-        transition: 250ms;
+        transition: 100ms;
     }
 }
 
