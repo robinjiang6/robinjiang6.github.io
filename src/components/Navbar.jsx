@@ -13,6 +13,7 @@ function Navbar() {
   const showButton = () => {
     if(window.innerWidth <= 960){
       setButton(false);
+      setClick(false);
     }else{
       setButton(true);
     }
@@ -33,7 +34,7 @@ function Navbar() {
               <div className='menu-icon' onClick={handleClick}>
                 <img src = {click ? '/images/menuXWhite.png':'/images/menuLinesWhite.png'} alt = "menu" id = {click ? 'menuX':'menuLines'}/>
               </div>
-              <ul className={click ? 'nav-menu active': 'nav-menu'}>
+              <ul className={click ? 'nav-menu-active':'nav-menu'}>
                 <li className = 'nav-item'>
                   <Link to='/' className='nav-links' onClick={closeMobileMenu}>
                     Home
