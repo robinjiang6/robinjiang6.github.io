@@ -165,9 +165,10 @@
         font-size: 1.8rem;
         cursor: pointer;
     }
-    #menuX{
+    #menuX,#menuLines{
         color: var(--text);
         font-size: 2rem;
+        background-color: red;
     }
     .nav-links-mobile{
         display: block;
@@ -187,5 +188,14 @@
         background: var(--text);
         color: var(--base);
         transition: 250ms;
+    }
+}
+
+@media screen and (max-width:430px){
+    .navbar-logo{
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(0%, 50%);
     }
 }
