@@ -1,0 +1,11 @@
+.temp-other{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+}
+#ponyo-link{
+    text-decoration: none;
+    color: #000;
+}
