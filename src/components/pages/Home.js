@@ -1,11 +1,10 @@
 import '../../App.css';
-import Video from '../Video'
 import React from 'react'
 
 function Home() {
     return(
         <div className='home-container'>
-            <Video />
+            hello, the home page is under construction
         </div>
     ); 
 }

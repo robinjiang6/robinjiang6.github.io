@@ -13,3 +13,8 @@
     align-items: center;
     object-fit: contain;
 }
+#text-ponyo{
+    position: absolute;
+    top: 100px;
+    color: #19e3b4;
+}
