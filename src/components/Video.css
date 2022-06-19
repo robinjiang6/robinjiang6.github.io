@@ -3,7 +3,7 @@
     width: 100%;
     height: 100%;
     position: relative;
-    z-index: -1;
+    z-index: 0;
 }
 .video-container{
     height: 100vh;
@@ -12,6 +12,7 @@
     flex-direction: column;
     align-items: center;
     object-fit: contain;
+    background-color: none;
 }
 #text-ponyo{
     position: absolute;
