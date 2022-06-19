@@ -9,4 +9,5 @@
 }
 .main-page{
     min-height: calc(100vh - 80px - 6rem);
+    background-color: #fff;
 }
