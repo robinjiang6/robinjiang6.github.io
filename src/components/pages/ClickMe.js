@@ -2,7 +2,7 @@ import React from 'react'
 import '../../App.css';
 function ClickMe() {
   return (
-    <div>ClickMe</div>
+    <div>you guessed it, also under construction</div>
   )
 }
 
