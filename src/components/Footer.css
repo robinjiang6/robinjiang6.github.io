@@ -3,6 +3,7 @@
     --text: #fff;
     --accent: #062a2e;
     --accent2: #0d5259;
+    --size: 2rem;
 }
 .footer-container{
     position: relative;
@@ -16,4 +17,35 @@
     justify-content: center;
     align-items: center;
     color: var(--text);
+}
+#github-img{
+    height: var(--size);
+    text-decoration: none;
+    vertical-align: text-bottom;
+}
+#linked-in-img{
+    height: calc(1.1 * var(--size));
+    text-decoration: none;
+    vertical-align: text-bottom;
+}
+.github-text, .linkedin-text{
+    color: var(--text);
+    font-size: calc(0.75 * var(--size));
+    padding: 0 0 0 calc(0.25 * var(--size));
+    margin-right: var(--size);
+}
+a{
+    text-decoration: none;
+}
+.github-text:hover, .linkedin-text:hover{
+    text-decoration-line: underline;
+}
+.links{
+    display: flex;
+}
+.github-container,.linked-in-container{
+    display: flex;
+    flex-direction: row;
+    justify-self: start;
+    align-items: center;
 }
