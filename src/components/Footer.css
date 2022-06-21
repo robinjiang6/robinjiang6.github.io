@@ -67,6 +67,10 @@ a{
     }
     .github-text{
         margin-right: 0;
+        white-space: nowrap;
+    }
+    .linkedin-text{
+        white-space: nowrap;
     }
     .github-container{
         padding-bottom: calc(var(--size) * .25);
