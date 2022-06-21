@@ -6,11 +6,11 @@
     --size: 2rem;
 }
 .footer-container{
-    position: relative;
+    position: relative; 
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 6rem;
+    min-height: 6rem;
     background-color: var(--base);
     display: flex;
     flex-direction: column;
@@ -28,11 +28,16 @@
     text-decoration: none;
     vertical-align: text-bottom;
 }
-.github-text, .linkedin-text{
+.github-text{
     color: var(--text);
     font-size: calc(0.75 * var(--size));
     padding: 0 0 0 calc(0.25 * var(--size));
     margin-right: var(--size);
+}
+.linkedin-text{
+    color: var(--text);
+    font-size: calc(0.75 * var(--size));
+    padding: 0 0 0 calc(0.25 * var(--size));
 }
 a{
     text-decoration: none;
@@ -42,10 +47,29 @@ a{
 }
 .links{
     display: flex;
+    justify-content: center;
+}
+.footer{
+    justify-content: center;
+    width: calc(100% - 2rem);
 }
 .github-container,.linked-in-container{
     display: flex;
     flex-direction: row;
     justify-self: start;
     align-items: center;
+}
+
+@media screen and (max-width:680px){
+    .links{
+        flex-direction: column;
+        align-items: center;
+    }
+    .github-text{
+        margin-right: 0;
+    }
+    .github-container{
+        padding-bottom: calc(var(--size) * .25);
+        padding-top: calc(var(--size) * .5);
+    }
 }

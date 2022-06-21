@@ -11,3 +11,8 @@
     min-height: calc(100vh - 80px - 6rem);
     background-color: #fff;
 }
+@media screen and (max-width:680px){
+    .main-page{
+        min-height: calc(100vh - 80px - 8rem);
+    }
+}
