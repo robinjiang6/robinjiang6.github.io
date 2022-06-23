@@ -3,16 +3,17 @@
     margin: 0;
     padding: 0;
     font-family: 'Open Sans', 'Montserrat', sans-serif;
+    --home_height: calc(100vh - 80px - 6rem);
 }
 *::-webkit-scrollbar{
     display: none;
 }
 .main-page{
-    min-height: calc(100vh - 80px - 6rem);
+    min-height: var(--home_height);
     background-color: #fff;
 }
 @media screen and (max-width:680px){
     .main-page{
-        min-height: calc(100vh - 80px - 8rem);
+        min-height: calc(var(--home_height) - 2rem);
     }
 }
