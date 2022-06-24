@@ -11,6 +11,7 @@
 .main-page{
     min-height: var(--home_height);
     background-color: #fff;
+    z-index: -999;
 }
 @media screen and (max-width:680px){
     .main-page{
