@@ -1,12 +1,18 @@
 
 .video{
     height: 110vh;
+    width: 100%;
     position: relative;
     z-index: 0;
+    object-fit: cover;
+}
+.home-container{
+    overflow: hidden;
 }
 .caption{
     position: relative;
-    top: -1rem;
+    margin-bottom: -3rem;
+    top: -4rem;
     right: 1rem;
     display: flex;
     width: 100%;
