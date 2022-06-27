@@ -1,5 +1,5 @@
 
-.video{
+.video, .image-portal{
     height: 110vh;
     width: 100%;
     position: relative;
@@ -9,7 +9,7 @@
 .home-container{
     overflow: hidden;
 }
-.caption{
+.caption, .caption2{
     position: relative;
     margin-bottom: -3rem;
     top: -4rem;
@@ -21,6 +21,9 @@
     color: white;
     font-size: 1.3rem;
     font-style: italic;
+}
+.caption2{
+    display: none;
 }
 .title{
     display: flex;
@@ -34,8 +37,28 @@
     font-weight: 1000;
     color:#10d1e6;
 }
+.image-portal{
+    display: none;
+}
 @media screen and (max-width:1060px){
     .title{
         font-size: 7vw;
+    }
+}
+@media screen and (max-width:960px){
+    .title{
+        font-size: 7vw;
+    }
+    .caption{
+        display: none;
+    }
+    .caption2{
+        display:flex;
+    }
+    .video{
+        display: none;
+    }
+    .image-portal{
+        display: flex;
     }
 }
