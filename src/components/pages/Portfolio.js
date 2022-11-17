@@ -1,9 +1,9 @@
 import React from 'react';
 import '../../App.css';
-import './Other.css';
+import './Portfolio.css';
 import {Link} from 'react-router-dom';
 
-function Other() {
+function Portfolio() {
   return (
     <div>
         <div className="temp-other">Also under construction
@@ -13,4 +13,4 @@ function Other() {
   )
 }
 
-export default Other
+export default Portfolio
