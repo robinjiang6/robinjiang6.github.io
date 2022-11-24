@@ -29,7 +29,7 @@ function Portfolio() {
                   <div className='box-items'>
                     <div className='title-and-description'>
                       <div className='job-title'>Discovery Cube<span className='port-dash'> - </span><span className='job-position'>Volunteer</span></div>
-                      <div className='job-description'>Description here fasl;dfhkljashdgfl;ksahg  lskghshlksaghlshg sl lk</div>
+                      <div className='job-description'>I developed my communication and customer service skills here while running exhibits and demonstrations for guests.</div>
                     </div>
                     <div className='picture-container'>
                       <img src='/images/cube.png' alt='The Discovery Cube' className='portfolio-picture' id='cube-picture'></img>
