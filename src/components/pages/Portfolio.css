@@ -12,13 +12,14 @@
     border-radius: 5vh;
     background-color: var(--base);
     height: var(--box-height);
-    width: clamp(15rem, 30rem, 80vw);
+    width: clamp(15rem, 32rem, 80vw);
     margin-bottom: 2vh;
 }
 .box-container:hover{
     background-color: var(--accent3);
     border-bottom: 5px solid #000;
-    transition: all 0.15s;
+    transition: background-color 0.15s;
+    transition: border-bottom 0.15s;
 }
 .box-items{
     height: 100%;
@@ -33,7 +34,7 @@
     flex-direction: column;
     align-items: center;
 }
-.picture{
+.portfolio-picture{
     height: calc(var(--box-height) * 0.75);
     border-radius: 3vh;
 }
@@ -53,11 +54,47 @@
 }
 .job-title{
     font-size: 1rem;
+    font-weight: 700;
 }
 .job-description{
     font-size: 1rem;
+    padding-right: 1rem;
 }
 .portfolio-peraton{
     text-decoration: none;
     color: var(--text)
+}
+@media screen and (max-width:620px){
+    .box-container{
+        height: calc(var(--box-height) + 2rem);
+        width: clamp(0px, 400px, 80vw);
+    }
+    .box-items{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .picture-container{
+        margin: 0;
+    }
+    .title-and-description{
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+    }
+    .job-description{
+        font-size: 0;
+    }
+}
+@media screen and (max-width:460px){
+    .port-dash{
+        font-size: 0;
+    }
+    .job-title{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .portfolio-picture{
+        max-width: 60vw;
+    }
 }
