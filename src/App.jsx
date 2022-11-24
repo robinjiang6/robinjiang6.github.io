@@ -13,10 +13,12 @@ import Uci from './components/pages/Uci';
 import About from './components/pages/About';
 import ClickMe from './components/pages/ClickMe';
 import Footer from './components/Footer';
+import ScrollToTop from './ScrollToTop';
 function App() {
   return (
     <div className="App">
       <Router>
+        <ScrollToTop />
         <Navbar />
         <div className='main-page'>
           <Routes>
