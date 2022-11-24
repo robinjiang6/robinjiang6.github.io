@@ -4,11 +4,6 @@
     --accent: #062a2e;
     --accent2: #0d5259;
 }
-#logo{
-    height: 2rem;
-    margin-left: 0.5rem;
-    font-size: 1.8rem;
-}
 #menuX, #menuLines{
     height: 2rem;
     user-select: none;
@@ -32,7 +27,7 @@
     height: 70px;
     max-width: 1500px;
 }
-.navbar-logo{
+.navbar-name{
     color: var(--text);
     justify-self: start;
     margin-left: 2rem;
@@ -159,7 +154,7 @@
         border-radius: 0;
         transition: all 0.15s ease;
     }
-    .navbar-logo{
+    .navbar-name{
         position: absolute;
         top: 0;
         left: 0;
@@ -200,7 +195,7 @@
 }
 
 @media screen and (max-width:430px){
-    .navbar-logo{
+    .navbar-name{
         position: absolute;
         top: 0;
         left: 0;

@@ -28,8 +28,8 @@ function Navbar() {
     <div>
         <nav className="navbar">
             <div className="navbar-container">
-              <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-                Robin Jiang <img src = '/images/logo.png' alt="Logo" id = 'logo'/>
+              <Link to="/" className="navbar-name" onClick={closeMobileMenu}>
+                Robin Jiang
               </Link>
               <div className='menu-icon' onClick={handleClick}>
                 <img src = {click ? '/images/menuXWhite.png':'/images/menuLinesWhite.png'} alt = "menu" id = {click ? 'menuX':'menuLines'}/>

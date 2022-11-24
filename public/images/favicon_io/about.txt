@@ -1,6 +1,6 @@
 This favicon was generated using the following font:
 
-- Font Title: Roboto
-- Font Author: Copyright 2011 Google Inc. All Rights Reserved.
-- Font Source: http://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Me5WZLCzYlKw.ttf
-- Font License: Apache License, version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.html))
+- Font Title: Open Sans
+- Font Author: Copyright 2020 The Open Sans Project Authors (https://github.com/googlefonts/opensans)
+- Font Source: http://fonts.gstatic.com/s/opensans/v34/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsg-1y4nY1M2xLER.ttf
+- Font License: SIL Open Font License, 1.1 (http://scripts.sil.org/OFL))
