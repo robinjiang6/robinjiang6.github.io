@@ -4,7 +4,7 @@
 }
 .navbar{
     background: var(--base);
-    height: 80px;
+    height: var(--navbar-height);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,8 +18,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 70px;
-    max-width: 1500px;
+    height: var(--navbar-height);
+    max-width: 90vw;
 }
 .navbar-name{
     color: var(--text);
@@ -39,12 +39,12 @@
     grid-gap:  0rem;
     list-style: none;
     text-align: center;
-    width: 60vw;
+    width: 70vw;
     justify-content: end;
     margin-right: 0;
 }
 .nav-item{
-    height: 80px;
+    height: var(--navbar-height);
     font-size: 1.1rem;
 }
 .nav-links{
@@ -78,7 +78,7 @@
         grid-gap: 0rem;
         list-style: none;
         text-align: center;
-        width: 50vw;
+        width: 60vw;
         justify-content: end;
     }
 }
@@ -87,10 +87,6 @@
         position: relative;
         flex: initial;
         font-size: 1.3rem;
-    }
-    .nav-item-mobile{
-        position: relative;
-        flex: initial;
     }
     .nav-menu{
         margin: 0;
@@ -104,11 +100,11 @@
         text-align: center;
         width: 100%;
         height: 95vh;
-        top: 80px;
+        top: var(--navbar-height);
         left: -100%;
         opacity: 1;
         transition: all 0.5s ease;
-        background: var(--accent);
+        background: var(--accent1);
         z-index: 1;
         grid-template-columns: none;
     }
@@ -124,11 +120,11 @@
         text-align: center;
         width: 100%;
         height: 95vh;
-        top: 80px;
+        top: var(--navbar-height);
         left: 0;
         opacity: 1;
         transition: all 0.5s ease;
-        background: var(--accent);
+        background: var(--accent1);
         z-index: 1;
         grid-template-columns: none;
     }
@@ -162,25 +158,6 @@
     #menuX,#menuLines{
         color: var(--text);
         font-size: 2rem;
-    }
-    .nav-links-mobile{
-        display: block;
-        text-align: center;
-        margin: 2rem auto;
-        border-radius: 4px;
-        width: 80%;
-        text-decoration: none;
-        font-size: 1.5rem;
-        background-color: transparent;
-        color: var(--text);
-        padding: 14px 20px;
-        border: 1px solid var(--text);
-        transition: all 0.1s ease-out;
-    }
-    .nav-links-mobile:hover {
-        background: var(--text);
-        color: var(--base);
-        transition: 100ms;
     }
 }
 

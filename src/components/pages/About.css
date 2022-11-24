@@ -27,6 +27,9 @@
     margin-right: clamp(2vw, 10vw, 20vw);
     font-size: 1.3rem;
 }
+.yummy-emoji{
+    font-size: 1.05rem;
+}
 @media screen and (max-width:1200px){
     .about-text{
         margin-right: clamp(2vw, 6vw, 10vw);

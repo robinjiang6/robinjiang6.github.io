@@ -12,7 +12,7 @@ function Footer() {
             </a>
             <a href="https://www.linkedin.com/in/robin-jiang-805249202/" target="_blank" rel="noreferrer" className="linked-in-container">
               <img src="/images/linked-in-64.png" alt="Linked In Logo-" id="linked-in-img"></img>
-              <p className="linkedin-text">My LinkedIn</p>
+              <p className="linked-in-text">My LinkedIn</p>
             </a>
           </div>
         </div>

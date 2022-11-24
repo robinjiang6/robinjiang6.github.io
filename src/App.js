@@ -6,6 +6,7 @@ import Home from './components/pages/Home';
 import Ponyo from './components/pages/Ponyo';
 import Ponyo2 from './components/pages/Ponyo2';
 import Portfolio from './components/pages/Portfolio';
+import Peraton from './components/pages/Peraton';
 import About from './components/pages/About';
 import ClickMe from './components/pages/ClickMe';
 import Footer from './components/Footer';
@@ -22,6 +23,7 @@ function App() {
             <Route path='/portfolio' element={<Portfolio />}/>
             <Route path='/about' element={<About />}/>
             <Route path='/click-me' element={<ClickMe />}/>
+            <Route path='/portfolio/peraton' element={<Peraton />}/>
           </Routes>
         </div>
         <Footer />

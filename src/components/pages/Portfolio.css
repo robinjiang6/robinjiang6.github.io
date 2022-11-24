@@ -1,11 +1,63 @@
-.temp-other{
-    width: 100%;
+.portfolio{
+    --box-height: 15rem;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    color: #000;
+    color: var(--text)
 }
-#ponyo-link{
+.construction-sign{
+    color: black;
+}
+.box-container{
+    border-radius: 5vh;
+    background-color: var(--base);
+    height: var(--box-height);
+    width: clamp(15rem, 30rem, 80vw);
+    margin-bottom: 2vh;
+}
+.box-container:hover{
+    background-color: var(--accent3);
+    border-bottom: 5px solid #000;
+    transition: all 0.15s;
+}
+.box-items{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: right;
+}
+.picture-container{
+    margin-right: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.picture{
+    height: calc(var(--box-height) * 0.75);
+    border-radius: 3vh;
+}
+.picture-caption{
+    margin-top: 0.4rem;
+    font-size: 0.8rem;
+    font-style: italic;
+}
+.picture-link{
+    color: var(--text);
+    text-decoration: underline;
     text-decoration: none;
-    color: #000;
+    /* change this later*/
+}
+.title-and-description{
+    margin-left: 1rem;
+}
+.job-title{
+    font-size: 1rem;
+}
+.job-description{
+    font-size: 1rem;
+}
+.portfolio-peraton{
+    text-decoration: none;
+    color: var(--text)
 }
