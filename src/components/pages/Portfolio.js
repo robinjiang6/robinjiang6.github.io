@@ -6,8 +6,7 @@ import {Link} from 'react-router-dom';
 function Portfolio() {
   return (
     <div>
-        <div className="temp-other">Also under construction
-        <Link to='/secret-ponyo' id="ponyo-link">...unless?</Link>
+        <div className="temp-other">Under construction
         </div>
     </div>
   )

@@ -1,3 +1,10 @@
+:root{
+    --base: #0d6973;
+    --text: #fff;
+    --accent: #062a2e;
+    --accent2: #0d5259;
+    --size: 2rem;
+}
 *{
     box-sizing: border-box;
     margin: 0;

@@ -1,9 +1,6 @@
-:root{
+.btn{
     --primary: #ffffff;
     --base: #094147;
-}
-
-.btn{
     padding: 8px 20px;
     border-radius: 2px;
     outline: none;

@@ -1,9 +1,3 @@
-:root{
-    --base: #0d6973;
-    --text: #fff;
-    --accent: #062a2e;
-    --accent2: #0d5259;
-}
 #menuX, #menuLines{
     height: 2rem;
     user-select: none;
@@ -76,10 +70,6 @@
 }
 .menu-icon{
     display: none;
-}
-.btn-nav{
-    min-width: 8rem;
-    margin-left: 1rem;
 }
 @media screen and (min-width:960.001px) and (max-width: 1300px){
     .nav-menu{

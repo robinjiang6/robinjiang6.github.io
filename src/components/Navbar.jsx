@@ -50,15 +50,7 @@ function Navbar() {
                     Portfolio
                   </Link>
                 </li>
-                <li className = 'nav-item-mobile'>
-                  <Link to='/click-me' className='nav-links-mobile' onClick={closeMobileMenu}>
-                    CLICK ME!!!
-                  </Link>
-                </li>
               </ul>
-              <div className="btn-nav">
-                {button && <Button buttonStyle='btn--outline'>CLICK ME!!!</Button>}
-              </div>
             </div>
         </nav>
     </div>
