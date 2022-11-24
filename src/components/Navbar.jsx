@@ -32,7 +32,7 @@ function Navbar() {
                 Robin Jiang
               </Link>
               <div className='menu-icon' onClick={handleClick}>
-                <img src = {click ? '/images/menuXWhite.png':'/images/menuLinesWhite.png'} alt = "menu" id = {click ? 'menuX':'menuLines'}/>
+                <img src = {click ? '/images/menuXGreen.png':'/images/menuLinesGreen.png'} alt = "menu" id = {click ? 'menuX':'menuLines'}/>
               </div>
               <ul className={click ? 'nav-menu-active':'nav-menu'}>
                 <li className = 'nav-item'>

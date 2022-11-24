@@ -1,10 +1,10 @@
 :root{
     --base: #0d6973;
-    --text: #fff;
     --accent1: #062a2e;
     --accent2: #0d5259;
     --accent3: #0b7d8a;
-    --size: 2rem;
+    --hover: #EEE;
+    --background: #FFF;
     --navbar-height: 80px;
 }
 *{
@@ -19,7 +19,7 @@
 }
 .main-page{
     min-height: var(--home_height);
-    background-color: #fff;
+    background-color: var(--background);
     z-index: -999;
 }
 @media screen and (max-width:680px){

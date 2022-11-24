@@ -7,8 +7,8 @@ function Portfolio() {
   return (
     <div>
         <div className='portfolio'>
-            <div className='construction-sign'>
-              Construction in progress
+            <div className='portfolio-category'>
+              Experience
             </div>
             <Link to="/portfolio/peraton" className='portfolio-peraton'>
               <div className='box-container'>
@@ -24,6 +24,23 @@ function Portfolio() {
                   </div>
               </div>
             </Link>
+            <Link to="/portfolio/discovery-cube" className='portfolio-cube'>
+              <div className='box-container'>
+                  <div className='box-items'>
+                    <div className='title-and-description'>
+                      <div className='job-title'>Discovery Cube<span className='port-dash'> - </span><span className='job-position'>Volunteer</span></div>
+                      <div className='job-description'>Description here fasl;dfhkljashdgfl;ksahg  lskghshlksaghlshg sl lk</div>
+                    </div>
+                    <div className='picture-container'>
+                      <img src='/images/cube.png' alt='The Discovery Cube' className='portfolio-picture' id='cube-picture'></img>
+                      <div className='picture-caption' id='cube-picture'>The Discovery Cube</div>
+                    </div>                
+                  </div>
+              </div>
+            </Link>
+            <div className='portfolio-category'>
+              Education
+            </div>
         </div>
     </div>
   )
