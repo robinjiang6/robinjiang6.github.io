@@ -10,7 +10,7 @@ function Portfolio() {
             <div className='portfolio-category'>
               Experience
             </div>
-            <Link to="/portfolio/peraton" className='portfolio-peraton'>
+            <Link to="/portfolio/peraton" className='portfolio-item'>
               <div className='box-container'>
                   <div className='box-items'>
                     <div className='title-and-description'>
@@ -24,7 +24,7 @@ function Portfolio() {
                   </div>
               </div>
             </Link>
-            <Link to="/portfolio/discovery-cube" className='portfolio-cube'>
+            <Link to="/portfolio/discovery-cube" className='portfolio-item'>
               <div className='box-container'>
                   <div className='box-items'>
                     <div className='title-and-description'>
@@ -41,6 +41,34 @@ function Portfolio() {
             <div className='portfolio-category'>
               Education
             </div>
+            <Link to="/portfolio/uci" className='portfolio-item'>
+              <div className='box-container'>
+                  <div className='box-items'>
+                    <div className='title-and-description'>
+                      <div className='job-title'>University of California, Irvine</div>
+                      <div className='job-description'>Currently pursuing a bachelor's degree in Computer Engineering here as a UC Regents scholar.</div>
+                    </div>
+                    <div className='picture-container'>
+                      <img src='/images/uci.png' alt='UCI' className='portfolio-picture' id='uci-picture'></img>
+                      <div className='picture-caption' id='uci-picture'>Mesa Court Housing at UCI</div>
+                    </div>                
+                  </div>
+              </div>
+            </Link>
+            <Link to="/portfolio/troy-high-school" className='portfolio-item'>
+              <div className='box-container'>
+                  <div className='box-items'>
+                    <div className='title-and-description'>
+                      <div className='job-title'>Troy High School</div>
+                      <div className='job-description'>Graduated as valedictorian in 2022.</div>
+                    </div>
+                    <div className='picture-container'>
+                      <img src='/images/troy.png' alt='Troy High School' className='portfolio-picture' id='troy-picture'></img>
+                      <div className='picture-caption' id='troy-picture'>Troy High School</div>
+                    </div>                
+                  </div>
+              </div>
+            </Link>
         </div>
     </div>
   )

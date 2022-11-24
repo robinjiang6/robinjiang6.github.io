@@ -7,7 +7,7 @@
 .portfolio-category{
     color: var(--accent1);
     font-size: 1.7rem;
-    margin-top: 1rem;
+    margin-top: 1.5rem;
     margin-bottom: 0.5rem;
 }
 .box-container{
@@ -20,8 +20,8 @@
     transition: border-bottom 0.15s;
 }
 .box-container:hover{
-    border-bottom: 0.35rem solid var(--base);
-    background-color: var(--hover);
+    border-bottom: 0.4rem solid var(--base);
+    background-color: #e8fbfc;
 }
 .box-items{
     height: 100%;
@@ -45,7 +45,7 @@
     font-size: 0.8rem;
     font-style: italic;
 }
-#cube-picture{
+#cube-picture, #troy-picture, #uci-picture{
     font-size: 0.9rem;
 }
 .picture-link{
@@ -56,6 +56,7 @@
 }
 .title-and-description{
     margin-left: 1rem;
+    margin-bottom: 2rem;
 }
 .job-title{
     font-size: 1rem;
@@ -65,7 +66,7 @@
     font-size: 1rem;
     padding-right: 1rem;
 }
-.portfolio-peraton, .portfolio-cube{
+.portfolio-item{
     text-decoration: none;
     color: var(--accent1)
 }
