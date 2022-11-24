@@ -19,7 +19,7 @@ function Portfolio() {
                     </div>
                     <div className='picture-container'>
                       <img src='/images/artemis.png' alt='Artemis 1, a Peraton owned antenna' className='picture' id='peraton-picture'></img>
-                      <div className='picture-caption'>One of Peraton's <a href='https://eyes.nasa.gov/dsn/dsn.html' target="_blank" className='picture-link'>Antennas</a></div>
+                      <div className='picture-caption'>One of Peraton's <a href='https://eyes.nasa.gov/dsn/dsn.html' target="_blank" rel="noreferrer" className='picture-link'>Antennas</a></div>
                     </div>                
                   </div>
               </div>
