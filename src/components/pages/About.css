@@ -9,7 +9,7 @@
     align-items: center;
 }
 .about-picture-container{
-    --border-width: 0.3rem;
+    --border-width: 0.1rem;
     background-color: var(--base);
     height: calc(var(--pic-height) + 2 * var(--border-width));
     width: calc(748 * var(--pic-height) / 935 + 2 * var(--border-width));
@@ -26,6 +26,7 @@
 .about-text{
     margin-right: clamp(2vw, 10vw, 20vw);
     font-size: 1.3rem;
+    color: var(--accent1);
 }
 .yummy-emoji{
     font-size: 1.05rem;

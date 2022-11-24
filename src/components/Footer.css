@@ -1,4 +1,5 @@
 .footer-container{
+    --size: 2rem;
     position: relative; 
     bottom: 0;
     left: 0;
@@ -9,7 +10,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: var(--text);
+    color: white;
 }
 #github-img{
     height: var(--size);
@@ -22,13 +23,13 @@
     vertical-align: text-bottom;
 }
 .github-text{
-    color: var(--text);
+    color: white;
     font-size: calc(0.75 * var(--size));
     padding: 0 0 0 calc(0.25 * var(--size));
     margin-right: var(--size);
 }
 .linked-in-text{
-    color: var(--text);
+    color: white;
     font-size: calc(0.75 * var(--size));
     padding: 0 0 0 calc(0.25 * var(--size));
 }
@@ -53,7 +54,7 @@
     align-items: center;
 }
 
-@media screen and (max-width:680px){
+@media screen and (max-width:550px){
     .links{
         flex-direction: column;
         align-items: center;
