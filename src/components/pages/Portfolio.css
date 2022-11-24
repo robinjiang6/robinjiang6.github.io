@@ -11,15 +11,15 @@
 .box-container{
     border-radius: 5vh;
     background-color: var(--base);
+    border-bottom: 0px solid #000;
     height: var(--box-height);
     width: clamp(15rem, 32rem, 80vw);
     margin-bottom: 2vh;
+    transition: border-bottom 0.15s;
 }
 .box-container:hover{
     background-color: var(--accent3);
     border-bottom: 5px solid #000;
-    transition: background-color 0.15s;
-    transition: border-bottom 0.15s;
 }
 .box-items{
     height: 100%;
