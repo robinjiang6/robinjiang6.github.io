@@ -22,7 +22,7 @@ export default function ThreeD() {
           <ambientLight intensity={0.2} />
           <directionalLight color="white" position={[0, 0, 5]} />
           <Model />
-          <OrbitControls autoRotate autoRotateSpeed={0} enableZoom={false} enablePan={false} minPolarAngle={1} maxPolarAngle={2}/>
+          <OrbitControls autoRotate autoRotateSpeed={0} enableZoom={true} enablePan={false} minPolarAngle={1} maxPolarAngle={2} minDistance={5} maxDistance={15}/>
         </Suspense>
       </Canvas>
     </div>
