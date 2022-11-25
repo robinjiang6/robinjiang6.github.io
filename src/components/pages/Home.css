@@ -1,4 +1,4 @@
-.title{
+.home-title{
     position: absolute;
     display: flex;
     z-index: 1;
@@ -8,4 +8,16 @@
     font-weight: 1000;
     padding-top: 3rem;
     color:var(--accent1);
+}
+.home-caption{
+    display: flex;
+    position: absolute;
+    width: 100%;
+    justify-content: right;
+    bottom: 7rem;
+    font-style: italic;
+    color: var(--accent1);
+    align-self: end;
+    padding-right: 2rem;
+    font-size: 1.5rem;
 }
