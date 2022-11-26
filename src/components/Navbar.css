@@ -4,7 +4,7 @@
 }
 .navbar{
     background: var(--background);
-    height: calc(var(--navbar-height) - 2px);
+    height: calc(var(--navbar-height) - 0.1rem);
     border-bottom: 0.1rem solid var(--base);
     display: flex;
     justify-content: center;
@@ -72,7 +72,10 @@
 .menu-icon{
     display: none;
 }
-@media screen and (min-width:960.001px) and (max-width: 1300px){
+.content-blocker-active, .content-blocker{
+    display: none;
+}
+@media screen and (max-width: 1300px){
     .nav-menu{
         display: grid;
         grid-template-columns: repeat(5,auto);
@@ -159,6 +162,28 @@
     #menuX,#menuLines{
         color: var(--text);
         font-size: 2rem;
+    }
+    .content-blocker{
+        position: fixed;
+        display: block;
+        background-color: var(--background);
+        top: 0;
+        left: -100vw;
+        width: 100vw;
+        height: 100vh;
+        z-index: 1;
+        transition: all 0.5s ease;
+    }
+    .content-blocker-active{
+        position: fixed;
+        display: block;
+        background-color: var(--background);
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 1;
+        transition: all 0.5s ease;
     }
 }
 
