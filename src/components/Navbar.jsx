@@ -26,6 +26,8 @@ function Navbar() {
   window.addEventListener('resize', showButton);*/
   return (
     <div>
+        <div className={click ? 'content-blocker-active':'content-blocker'}></div>
+        {/* this is for in case the user tries to scroll down with the menu open*/}
         <nav className="navbar">
             <div className="navbar-container">
               <Link to="/" className="navbar-name" onClick={closeMobileMenu}>
@@ -34,6 +36,7 @@ function Navbar() {
               <div className='menu-icon' onClick={handleClick}>
                 <img src = {click ? '/images/menuXGreen.png':'/images/menuLinesGreen.png'} alt = "menu" id = {click ? 'menuX':'menuLines'}/>
               </div>
+              
               <ul className={click ? 'nav-menu-active':'nav-menu'}>
                 <li className = 'nav-item'>
                   <Link to='/' className='nav-links' onClick={closeMobileMenu}>
