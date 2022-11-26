@@ -1,23 +1,31 @@
+.home-container{
+    width: 100vw;
+}
 .home-title{
     position: absolute;
     display: flex;
-    z-index: 1;
     width: 100%;
     justify-content: center;
     font-size: clamp(0px, 6vw, 4rem);
     font-weight: 1000;
-    padding-top: 3rem;
+    padding-top: 3vh;
     color:var(--accent1);
 }
 .home-caption{
-    display: flex;
     position: absolute;
+    display: flex;
     width: 100%;
     justify-content: right;
-    bottom: 7rem;
+    font-size: clamp(0px, 6vw, 1.5rem);
     font-style: italic;
+    padding-top: calc(var(--home_height) - 2.5rem);
     color: var(--accent1);
-    align-self: end;
     padding-right: 2rem;
-    font-size: 1.5rem;
+    
+}
+@media screen and (max-width: 540px) {
+    .home-caption{
+        justify-content: center;
+        padding-right: 0;
+    }
 }

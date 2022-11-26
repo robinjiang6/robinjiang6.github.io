@@ -8,8 +8,8 @@ function Home() {
         <div className='home'>
             <div className='home-container'>
                 <p className='home-title'>Welcome to my Website</p>
-                <ThreeD />
                 <p className='home-caption'>A model of one of my 3D designs</p>
+                <ThreeD />
             </div>
         </div>
     ); 
