@@ -54,5 +54,6 @@
         margin-left: clamp(1vh, 4vh, 10vh);
         margin-right: clamp(1vh, 4vh, 10vh);
         margin-bottom: clamp(1vh, 5vh, 10vh);
+        font-size: clamp(1rem, 1.3rem, 4vw);
     }
 }

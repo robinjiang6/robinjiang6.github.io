@@ -1,11 +1,46 @@
 .portfolio-page-title{
     width: 100%;
-    justify-self: center;
     color: var(--accent1);
     text-align: center;
     font-size: clamp(0px, 3rem, 5vw);
 }
+.portfolio-page-position{
+    font-style: italic;
+}
+.portfolio-page-description-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 .portfolio-page-description{
+    font-size: 1.3rem;
+    color: var(--accent1);
     margin-top: 2rem;
-    text-align: center;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    width: clamp(0px, 50rem, 80vw);
+    align-items: center;
+}
+.portfolio-page-picture{
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+@media screen and (max-width:600px){
+    .portfolio-page-title-dash{
+        display: none;
+    }
+    .portfolio-page-title{
+        display: flex;
+        flex-direction: column;
+        font-size: clamp(0px, 3rem, 7vw);
+        font-weight: 700;
+    }
+    .portfolio-page-position{
+        font-size: clamp(0px, 3rem, 5vw);
+    }
+    .portfolio-page-description{
+        font-size: clamp(0.7rem, 1.3rem, 4vw);
+    }
 }
