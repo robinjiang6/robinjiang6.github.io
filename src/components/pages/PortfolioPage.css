@@ -1,4 +1,5 @@
 .portfolio-page-title{
+    margin-top: 3vw;
     width: 100%;
     color: var(--accent1);
     text-align: center;
@@ -15,8 +16,8 @@
 .portfolio-page-description{
     font-size: 1.3rem;
     color: var(--accent1);
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin-top: 3vw;
+    margin-bottom: 6vw;
     display: flex;
     flex-direction: column;
     width: clamp(0px, 50rem, 80vw);
@@ -24,8 +25,14 @@
 }
 .portfolio-page-picture{
     width: 100%;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-top: 3vw;
+    margin-bottom: 1vw;
+}
+.portfolio-page-pic-caption{
+    font-style: italic;
+    margin-bottom: 3vw;
+    font-size: 1.2rem;
+    text-align: center;
 }
 @media screen and (max-width:600px){
     .portfolio-page-title-dash{
@@ -37,10 +44,16 @@
         font-size: clamp(0px, 3rem, 7vw);
         font-weight: 700;
     }
+    #uci-portfolio-page-title{
+        font-size: clamp(0px, 3rem, 6vw);
+    }
     .portfolio-page-position{
         font-size: clamp(0px, 3rem, 5vw);
     }
     .portfolio-page-description{
         font-size: clamp(0.7rem, 1.3rem, 4vw);
+    }
+    .portfolio-page-pic-caption{
+        font-size: clamp(0.6rem, 1.2rem, 4vw);
     }
 }
