@@ -11,7 +11,6 @@ import DiscoveryCube from './components/pages/DiscoveryCube';
 import Troy from './components/pages/Troy';
 import Uci from './components/pages/Uci';
 import About from './components/pages/About';
-import ClickMe from './components/pages/ClickMe';
 import Footer from './components/Footer';
 import ScrollToTop from './ScrollToTop';
 function App() {
@@ -27,7 +26,6 @@ function App() {
             <Route path='/super-secret-ponyo' element={<Ponyo2 />}/>
             <Route path='/portfolio' element={<Portfolio />}/>
             <Route path='/about' element={<About />}/>
-            <Route path='/click-me' element={<ClickMe />}/>
             <Route path='/portfolio/peraton' element={<Peraton />}/>
             <Route path='/portfolio/discovery-cube' element={<DiscoveryCube />}/>
             <Route path='/portfolio/troy-high-school' element={<Troy />}/>

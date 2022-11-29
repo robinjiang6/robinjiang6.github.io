@@ -1,0 +1,19 @@
+.backlink-button-container{
+    padding: 0.5rem;
+    width: fit-content;
+}
+.backlink{
+    text-decoration: none;
+    color: var(--accent1);
+}
+.backlink-button{
+    background-color: var(--background);
+    border: 0.1rem solid var(--base);
+    width: fit-content;
+    padding: 0.5rem;
+    transition: all 0.15s ease;
+}
+.backlink-button:hover{
+    background-color: var(--base);
+    color: var(--background);
+}

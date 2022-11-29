@@ -70,7 +70,7 @@
     text-decoration: none;
     color: var(--accent1)
 }
-@media screen and (max-width:620px){
+@media screen and (max-width:660px){
     .box-container{
         height: calc(var(--box-height) + 2rem);
         width: clamp(0px, 400px, 80vw);
