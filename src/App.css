@@ -6,7 +6,8 @@
     --hover: #F5F5F5;
     --background: #FFF;
     --navbar-height: 80px;
-    --home_height: calc(100vh - var(--navbar-height) - 6rem);
+    --footer-height: 6rem;
+    --home_height: calc(100vh - var(--navbar-height) - var(--footer-height));
 }
 *{
     box-sizing: border-box;

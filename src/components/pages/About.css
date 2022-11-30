@@ -19,6 +19,7 @@
     margin-right: clamp(2vw, 5vw, 10vw);
 }
 .about-picture{
+    user-select: none;
     height: var(--pic-height);
     border-radius: 5vh;
     background-color: var(--base);
