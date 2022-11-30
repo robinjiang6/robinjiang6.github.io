@@ -2,13 +2,14 @@
     width: 100vw;
 }
 .home-title{
+    --title-font-size: clamp(0px, 4rem, 7vw);
     position: absolute;
     display: flex;
     width: 100%;
     justify-content: center;
-    font-size: clamp(0px, 4rem, 7vw);
+    font-size: var(--title-font-size);
     font-weight: 1000;
-    padding-top: 3vh;
+    padding-top: calc(0.5 * var(--title-font-size));
     color:var(--accent1);
 }
 .home-caption{

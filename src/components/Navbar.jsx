@@ -33,29 +33,27 @@ function Navbar() {
               <Link to="/" className="navbar-name" onClick={closeMobileMenu}>
                 Robin Jiang
               </Link>
-              <div className='nav-menu-container'>
-                <div className='menu-icon' onClick={handleClick}>
-                  <img src = {click ? '/images/menuXGreen.png':'/images/menuLinesGreen.png'} alt = "menu" id = {click ? 'menuX':'menuLines'}/>
-                </div>
-                
-                <ul className={click ? 'nav-menu-active':'nav-menu'}>
-                  <li className = 'nav-item'>
-                    <Link to='/' className='nav-links' onClick={closeMobileMenu}>
-                      Home
-                    </Link>
-                  </li>
-                  <li className = 'nav-item'>
-                    <Link to='/about' className='nav-links' onClick={closeMobileMenu}>
-                      About Me
-                    </Link>
-                  </li>
-                  <li className = 'nav-item'>
-                    <Link to='/portfolio' className='nav-links' onClick={closeMobileMenu}>
-                      Portfolio
-                    </Link>
-                  </li>
-                </ul>
+              <div className='nav-spacer'></div>
+              <div className='menu-icon' onClick={handleClick}>
+                <img src = {click ? '/images/menuXGreen.png':'/images/menuLinesGreen.png'} alt = "menu" id = {click ? 'menuX':'menuLines'}/>
               </div>
+              <ul className={click ? 'nav-menu-active':'nav-menu'}>
+                <li className = 'nav-item'>
+                  <Link to='/' className='nav-links' onClick={closeMobileMenu}>
+                    Home
+                  </Link>
+                </li>
+                <li className = 'nav-item'>
+                  <Link to='/about' className='nav-links' onClick={closeMobileMenu}>
+                    About Me
+                  </Link>
+                </li>
+                <li className = 'nav-item'>
+                  <Link to='/portfolio' className='nav-links' onClick={closeMobileMenu}>
+                    Portfolio
+                  </Link>
+                </li>
+              </ul>
             </div>
         </nav>
     </div>

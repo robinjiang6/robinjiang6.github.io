@@ -1,14 +1,15 @@
 #menuX, #menuLines{
-    height: 2rem;
+    height: clamp(0px, 2rem, 8vw);
     user-select: none;
 }
 .navbar{
+    position: relative;
     user-select: none;
     background: var(--background);
     height: calc(var(--navbar-height));
     border-bottom: 0.1rem solid var(--base);
     top: 0;
-    z-index: 999;
+    z-index: 3;
 }
 .navbar-container{
     display: flex;
@@ -19,7 +20,7 @@
 }
 .navbar-name{
     color: var(--accent1);
-    font-size: clamp(0px, 1.85rem, 12vw);
+    font-size: clamp(0.3rem, 1.85rem, 8vw);
     text-decoration: none;
     margin-left: clamp(0px, 20rem, 10vw);
     cursor: pointer;
@@ -30,9 +31,10 @@
     grid-gap:  0rem;
     list-style: none;
     text-align: center;
-    margin-right: 0;
+    margin-right: clamp(0px, 20rem, 10vw);
 }
 .nav-spacer{
+    width: 1px;
     flex-grow: 1;
 }
 .nav-item{
@@ -65,16 +67,16 @@
 .content-blocker-active, .content-blocker{
     display: none;
 }
-@media screen and (max-width:960px){
+@media screen and (max-width:900px){
     .nav-item{
         position: relative;
         flex: initial;
-        font-size: 1.3rem;
+        font-size: clamp(0.7rem, 1.3rem, 6vw);
     }
     .nav-menu{
         margin: 0;
         padding: 0;
-        grid-gap: 0;
+        grid-gap: 1rem;
         display: flex;
         position: absolute;
         justify-content: flex-start;
@@ -88,13 +90,13 @@
         opacity: 1;
         transition: all 0.5s ease;
         background: var(--background);
-        z-index: 1;
+        z-index: 2;
         grid-template-columns: none;
     }
     .nav-menu-active{
         margin: 0;
         padding: 0;
-        grid-gap: 0;
+        grid-gap: 1rem;
         display: flex;
         position: absolute;
         justify-content: flex-start;
@@ -108,7 +110,7 @@
         opacity: 1;
         transition: all 0.5s ease;
         background: var(--background);
-        z-index: 1;
+        z-index: 2;
         grid-template-columns: none;
     }
     .nav-links{
@@ -125,16 +127,8 @@
     }
     .menu-icon {
         display: block;
-        position: absolute;
-        top: 0;
-        right: 0;
-        transform: translate(-80%, 40%);
-        font-size: 1.8rem;
+        margin-right: clamp(0px, 17rem, 8vw);
         cursor: pointer;
-    }
-    #menuX,#menuLines{
-        color: var(--text);
-        font-size: 2rem;
     }
     .content-blocker{
         position: fixed;
