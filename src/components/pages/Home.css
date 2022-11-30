@@ -3,6 +3,7 @@
 }
 .home-title{
     --title-font-size: clamp(0px, 4rem, 7vw);
+    user-select: none;
     position: absolute;
     display: flex;
     width: 100%;
@@ -14,6 +15,7 @@
 }
 .home-caption{
     --caption-font-size: clamp(0px, 1.3rem, 5vw);
+    user-select: none;
     position: absolute;
     display: flex;
     width: 100%;
