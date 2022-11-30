@@ -1,9 +1,10 @@
 import "./ThreeD.css";
 import { Canvas } from "@react-three/fiber";
-import { useLoader } from "@react-three/fiber";
+import { useLoader} from "@react-three/fiber"; //, useThree } from "@react-three/fiber";
 import {OrbitControls } from "@react-three/drei";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import { Suspense } from "react";
+
 
 const Model = () => {
   const gltf = useLoader(GLTFLoader, "./models/rmpg_centered.gltf");
@@ -13,12 +14,18 @@ const Model = () => {
     </>
   );
 };
+/*
+const UpdateState = () => {
+  const state = useThree()
+  state.camera.maxPolarAngle:3;
+}*/
 
 export default function ThreeD() {
   return(
     <div className="canvas-container">
       <Canvas className='canvas'>
         <Suspense fallback={null}>
+          {/*<UpdateState />*/}
           <ambientLight intensity={0.2} />
           <directionalLight color="white" position={[0, 0, 5]} />
           <Model />

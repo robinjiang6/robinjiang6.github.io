@@ -14,6 +14,14 @@ import About from './components/pages/About';
 import Footer from './components/Footer';
 import ScrollToTop from './ScrollToTop';
 function App() {
+  const getMobileHeight = () => {
+    let vh = window.innerHeight * 0.01;
+    document.querySelector(':root').style.setProperty("--vh", `${vh}px`);
+  }
+  getMobileHeight()
+  window.addEventListener('resize', () => {
+    getMobileHeight()
+  });
   return (
     <div className="App">
       <Router>

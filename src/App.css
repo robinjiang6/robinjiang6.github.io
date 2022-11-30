@@ -5,8 +5,9 @@
     --accent3: #0b7d8a;
     --hover: #F5F5F5;
     --background: #FFF;
-    --navbar-height: 80px;
-    --home_height: calc(100vh - var(--navbar-height) - 6rem);
+    --navbar-height: clamp(0px, 80px, 18vw);
+    --footer-height: 6rem;
+    --home_height: calc(100 * var(--vh, 1vh) - var(--navbar-height) - var(--footer-height));
 }
 *{
     box-sizing: border-box;

@@ -1,3 +1,6 @@
+.portfolio-container{
+    min-height: var(--home_height);
+}
 .portfolio-page-title{
     margin-top: 3vw;
     width: 100%;

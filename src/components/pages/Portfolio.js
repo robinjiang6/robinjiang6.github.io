@@ -70,6 +70,7 @@ function Portfolio() {
               </div>
             </Link>
         </div>
+        <div className='portfolio-bottom-spacer'></div>
     </div>
   )
 }

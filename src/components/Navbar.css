@@ -1,48 +1,41 @@
 #menuX, #menuLines{
-    height: 2rem;
+    height: clamp(0px, 2rem, 8vw);
     user-select: none;
 }
 .navbar{
+    position: relative;
+    user-select: none;
     background: var(--background);
-    height: calc(var(--navbar-height) - 0.1rem);
+    height: calc(var(--navbar-height));
     border-bottom: 0.1rem solid var(--base);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.2rem;
-    position: sticky;
     top: 0;
-    z-index: 999;
+    z-index: 3;
 }
-
 .navbar-container{
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     height: var(--navbar-height);
-    max-width: 90vw;
+    width: 100vw;
 }
 .navbar-name{
     color: var(--accent1);
-    justify-self: start;
-    margin-left: 2rem;
-    min-width: 13rem;
-    cursor: pointer;
+    font-size: clamp(0.3rem, 1.85rem, 8vw);
     text-decoration: none;
-    font-size: 1.85rem;
-    display: flex;
-    align-items: center;
+    margin-left: clamp(0px, 20rem, 10vw);
+    cursor: pointer;
 }
-
 .nav-menu{
     display: grid;
     grid-template-columns: repeat(5,auto);
     grid-gap:  0rem;
     list-style: none;
     text-align: center;
-    width: 70vw;
-    justify-content: end;
-    margin-right: 0;
+    margin-right: clamp(0px, 20rem, 10vw);
+}
+.nav-spacer{
+    width: 1px;
+    flex-grow: 1;
 }
 .nav-item{
     height: var(--navbar-height);
@@ -65,7 +58,6 @@
 #menuLines{
     color: var(--text);
 }
-
 .nav-links-mobile{
     display: none;
 }
@@ -75,27 +67,16 @@
 .content-blocker-active, .content-blocker{
     display: none;
 }
-@media screen and (max-width: 1300px){
-    .nav-menu{
-        display: grid;
-        grid-template-columns: repeat(5,auto);
-        grid-gap: 0rem;
-        list-style: none;
-        text-align: center;
-        width: 60vw;
-        justify-content: end;
-    }
-}
-@media screen and (max-width:960px){
+@media screen and (max-width:900px){
     .nav-item{
         position: relative;
         flex: initial;
-        font-size: 1.3rem;
+        font-size: clamp(0.7rem, 1.3rem, 6vw);
     }
     .nav-menu{
         margin: 0;
         padding: 0;
-        grid-gap: 0;
+        grid-gap: 1rem;
         display: flex;
         position: absolute;
         justify-content: flex-start;
@@ -103,19 +84,19 @@
         list-style: none;
         text-align: center;
         width: 100%;
-        height: 95vh;
+        height: calc(var(--home-height) + var(--footer-height));
         top: var(--navbar-height);
         left: -100%;
         opacity: 1;
         transition: all 0.5s ease;
         background: var(--background);
-        z-index: 1;
+        z-index: 2;
         grid-template-columns: none;
     }
     .nav-menu-active{
         margin: 0;
         padding: 0;
-        grid-gap: 0;
+        grid-gap: 1rem;
         display: flex;
         position: absolute;
         justify-content: flex-start;
@@ -123,13 +104,13 @@
         list-style: none;
         text-align: center;
         width: 100%;
-        height: 95vh;
+        height: calc(var(--home-height) + var(--footer-height));
         top: var(--navbar-height);
         left: 0;
         opacity: 1;
         transition: all 0.5s ease;
         background: var(--background);
-        z-index: 1;
+        z-index: 2;
         grid-template-columns: none;
     }
     .nav-links{
@@ -144,24 +125,10 @@
         border-radius: 0;
         transition: all 0.15s ease;
     }
-    .navbar-name{
-        position: absolute;
-        top: 0;
-        left: 0;
-        transform: translate(25%, 50%);
-    }
     .menu-icon {
         display: block;
-        position: absolute;
-        top: 0;
-        right: 0;
-        transform: translate(-80%, 40%);
-        font-size: 1.8rem;
+        margin-right: clamp(0px, 17rem, 8vw);
         cursor: pointer;
-    }
-    #menuX,#menuLines{
-        color: var(--text);
-        font-size: 2rem;
     }
     .content-blocker{
         position: fixed;
@@ -184,14 +151,5 @@
         height: 100vh;
         z-index: 1;
         transition: all 0.5s ease;
-    }
-}
-
-@media screen and (max-width:430px){
-    .navbar-name{
-        position: absolute;
-        top: 0;
-        left: 0;
-        transform: translate(0%, 50%);
     }
 }

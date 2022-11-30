@@ -19,6 +19,7 @@
     margin-right: clamp(2vw, 5vw, 10vw);
 }
 .about-picture{
+    user-select: none;
     height: var(--pic-height);
     border-radius: 5vh;
     background-color: var(--base);
@@ -51,9 +52,12 @@
         margin-bottom: clamp(1vh, 3vh, 6vh);
     }
     .about-text{
-        margin-left: clamp(1vh, 4vh, 10vh);
-        margin-right: clamp(1vh, 4vh, 10vh);
+        margin-left: clamp(1vw, 6vw, 10vw);
+        margin-right: clamp(1vw, 6vw, 10vw);
         margin-bottom: clamp(1vh, 5vh, 10vh);
-        font-size: clamp(1rem, 1.3rem, 4vw);
+        font-size: clamp(0.9rem, 1.3rem, 4vw);
+    }
+    .yummy-emoji{
+        font-size:clamp(0.9rem, 1rem, 3vw);
     }
 }
