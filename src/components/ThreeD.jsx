@@ -17,23 +17,21 @@ const Model = () => {
 
 function UpdateModelSize() {
   let width = window.innerWidth;
-  const cam = useThree().camera;
-  cam.zoom = 10 * width/1980;
+  const { camera } = useThree();
+  camera.zoom = 10 * width/1980;
 }
 
 
 export default function ThreeD() {
   let width = window.innerWidth;
   window.addEventListener('resize', () => {
-    UpdateModelSize()
+    UpdateModelSize();
   });
   return(
     <div className="canvas-container">
       <Canvas className='canvas'>
         <Suspense fallback={null}>
-          <OrthographicCamera makeDefault zoom={10 * width/1980} near={-200}/>
-          <ambientLight intensity={0.2} />
-          <directionalLight color="white" position={[0, 100, 20]} />
+          
           <PresentationControls 
             enabled={true} // the controls can be disabled by setting this to false
             global={true} // Spin globally or by dragging the model
@@ -46,6 +44,9 @@ export default function ThreeD() {
             azimuth={[-Infinity, Infinity]} // Horizontal limits
             config={{ mass: 1, tension: 170, friction: 26 }} // Spring config
           >
+            <OrthographicCamera makeDefault zoom={10 * width/1980} near={-200}/>
+            <ambientLight intensity={0.2} />
+            <directionalLight color="white" position={[0, 100, 20]} />
             <Model />
           </PresentationControls>
           <OrbitControls autoRotate autoRotateSpeed={1}/>
