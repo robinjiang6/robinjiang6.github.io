@@ -1,37 +1,49 @@
 import "./ThreeD.css";
-import { Canvas, useThree } from "@react-three/fiber";
-import { useLoader} from "@react-three/fiber"; //, useThree } from "@react-three/fiber";
-import { OrbitControls, OrthographicCamera, PresentationControls } from "@react-three/drei";
+import { Canvas, useFrame} from "@react-three/fiber";
+import { useLoader} from "@react-three/fiber";
+import { PresentationControls, OrthographicCamera} from "@react-three/drei";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
-import { Suspense } from "react";
+import { Suspense, useRef } from "react";
 
 
 const Model = () => {
   const gltf = useLoader(GLTFLoader, "./models/rmpg_upright.gltf");
+  const ref = useRef();
+  useFrame((state, delta) => {
+    //ref.current.rotation.x += delta;
+  });
   return (
     <>
-      <primitive object={gltf.scene} scale={300} />
+      <primitive object={gltf.scene} scale={300} ref={ref}/>
     </>
   );
 };
 
-function UpdateModelSize() {
-  let width = window.innerWidth;
-  const { camera } = useThree();
-  camera.zoom = 10 * width/1980;
+const TheCamera = () => {
+  const ref = useRef();
+  let width = window.innerWidth
+  useFrame((state, delta) => {
+    ref.current.rotation.y += delta;
+    ref.current.zoom = 10 * width/1980;
+    /*
+    console.log("x: " + ref.current.rotation.x)
+    console.log("y: " + ref.current.rotation.y)
+    console.log("z: " + ref.current.rotation.z)
+    */
+  });
+  return(
+    <OrthographicCamera makeDefault zoom={10} near={-200} ref={ref}/>
+  )
 }
 
-
 export default function ThreeD() {
-  let width = window.innerWidth;
-  window.addEventListener('resize', () => {
-    UpdateModelSize();
-  });
   return(
     <div className="canvas-container">
       <Canvas className='canvas'>
         <Suspense fallback={null}>
-          
+          <TheCamera />
+          <ambientLight intensity={0.2} />
+          <directionalLight color="white" position={[0, 100, 20]} />
           <PresentationControls 
             enabled={true} // the controls can be disabled by setting this to false
             global={true} // Spin globally or by dragging the model
@@ -44,12 +56,8 @@ export default function ThreeD() {
             azimuth={[-Infinity, Infinity]} // Horizontal limits
             config={{ mass: 1, tension: 170, friction: 26 }} // Spring config
           >
-            <OrthographicCamera makeDefault zoom={10 * width/1980} near={-200}/>
-            <ambientLight intensity={0.2} />
-            <directionalLight color="white" position={[0, 100, 20]} />
             <Model />
           </PresentationControls>
-          <OrbitControls autoRotate autoRotateSpeed={1}/>
         </Suspense>
       </Canvas>
     </div>
