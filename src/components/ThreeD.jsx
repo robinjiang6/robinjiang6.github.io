@@ -21,16 +21,23 @@ const Model = () => {
 
 const TheCamera = () => {
   const ref = useRef();
-  let width = window.innerWidth
+  let width = window.innerWidth;
+  function updateWidth() {
+    width = window.innerWidth;
+    if (width <= 800){
+      width = 800;
+    }
+  }
   useFrame((state, delta) => {
     ref.current.rotation.y += delta;
-    ref.current.zoom = 10 * width/1980;
+    state.camera.zoom = 10 * width/1980;
     /*
     console.log("x: " + ref.current.rotation.x)
     console.log("y: " + ref.current.rotation.y)
     console.log("z: " + ref.current.rotation.z)
     */
   });
+  window.addEventListener("resize", updateWidth);
   return(
     <OrthographicCamera makeDefault zoom={10} near={-200} ref={ref}/>
   )
