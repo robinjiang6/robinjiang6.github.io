@@ -1,35 +1,70 @@
 import "./ThreeD.css";
-import { Canvas } from "@react-three/fiber";
-import { useLoader} from "@react-three/fiber"; //, useThree } from "@react-three/fiber";
-import {OrbitControls } from "@react-three/drei";
+import { Canvas, useFrame} from "@react-three/fiber";
+import { useLoader} from "@react-three/fiber";
+import { PresentationControls, OrthographicCamera} from "@react-three/drei";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
-import { Suspense } from "react";
+import { Suspense, useRef } from "react";
 
 
 const Model = () => {
-  const gltf = useLoader(GLTFLoader, "./models/rmpg_centered.gltf");
+  const gltf = useLoader(GLTFLoader, "./models/rmpg_upright.gltf");
+  const ref = useRef();
+  useFrame((state, delta) => {
+    //ref.current.rotation.x += delta;
+  });
   return (
     <>
-      <primitive object={gltf.scene} scale={30} />
+      <primitive object={gltf.scene} scale={300} ref={ref}/>
     </>
   );
 };
-/*
-const UpdateState = () => {
-  const state = useThree()
-  state.camera.maxPolarAngle:3;
-}*/
+
+const TheCamera = () => {
+  const ref = useRef();
+  let width = window.innerWidth;
+  function updateWidth() {
+    width = window.innerWidth;
+    if (width <= 800){
+      width = 800;
+    }
+  }
+  useFrame((state, delta) => {
+    ref.current.rotation.y += delta;
+    state.camera.zoom = 10 * width/1980;
+    /*
+    console.log("x: " + ref.current.rotation.x)
+    console.log("y: " + ref.current.rotation.y)
+    console.log("z: " + ref.current.rotation.z)
+    */
+  });
+  window.addEventListener("resize", updateWidth);
+  return(
+    <OrthographicCamera makeDefault zoom={10} near={-200} ref={ref}/>
+  )
+}
 
 export default function ThreeD() {
   return(
     <div className="canvas-container">
       <Canvas className='canvas'>
         <Suspense fallback={null}>
-          {/*<UpdateState />*/}
+          <TheCamera />
           <ambientLight intensity={0.2} />
-          <directionalLight color="white" position={[0, 0, 5]} />
-          <Model />
-          <OrbitControls autoRotate autoRotateSpeed={0} enableZoom={true} enablePan={false} minPolarAngle={1} maxPolarAngle={2} minDistance={5} maxDistance={15}/>
+          <directionalLight color="white" position={[0, 100, 20]} />
+          <PresentationControls 
+            enabled={true} // the controls can be disabled by setting this to false
+            global={true} // Spin globally or by dragging the model
+            cursor={false} // Whether to toggle cursor style on drag
+            snap={true} // Snap-back to center (can also be a spring config)
+            speed={2} // Speed factor
+            zoom={0.8} // Zoom factor when half the polar-max is reached
+            rotation={[0, 0, 0]} // Default rotation
+            polar={[-Math.PI / 6, Math.PI / 6]} // Vertical limits
+            azimuth={[-Infinity, Infinity]} // Horizontal limits
+            config={{ mass: 1, tension: 170, friction: 26 }} // Spring config
+          >
+            <Model />
+          </PresentationControls>
         </Suspense>
       </Canvas>
     </div>
